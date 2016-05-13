@@ -49,12 +49,12 @@ void sniff_ip_packet(unsigned char *packet){
 	fprintf(log, "  IP Header Length    	: %d\n", (unsigned int)ip->ihl);
 	fprintf(log, "  Type of Service     	: %d\n", (unsigned int)ip->tos);
 	fprintf(log, "  Total Length(in bytes)  : %d\n", ntohs(ip->tot_len)*4);
-	fprintf(log, "  Identification			: %d\n", ntohs(ip->id));
-	fprintf(log, "  TTL 					: %d\n", (unsigned int)ip->ttl);
-	fprintf(log, "  Protocol				: %d\n", (unsigned int)ip->protocol);
-	fprintf(log, "  Checksum				: %d\n", ntohs(ip->check));
-	fprintf(log, "  Source IP 				: %s\n", inet_ntoa(ip->saddr));
-	fprintf(log, "  Destination IP			: %s\n", inet_ntoa(ip->daddr));
+	fprintf(log, "  Identification		: %d\n", ntohs(ip->id));
+	fprintf(log, "  TTL 			: %d\n", (unsigned int)ip->ttl);
+	fprintf(log, "  Protocol		: %d\n", (unsigned int)ip->protocol);
+	fprintf(log, "  Checksum		: %d\n", ntohs(ip->check));
+	fprintf(log, "  Source IP 		: %s\n", inet_ntoa(ip->saddr));
+	fprintf(log, "  Destination IP		: %s\n", inet_ntoa(ip->daddr));
 }
 
 void sniff_tcp_packet(unsigned char *packet){

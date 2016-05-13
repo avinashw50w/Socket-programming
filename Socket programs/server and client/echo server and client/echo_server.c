@@ -25,7 +25,7 @@ int main(int argc, char const *argv[]){
 	server.sin_addr.s_addr = htonl(INADDR_ANY);
 	bzero(&server.sin_zero,8);
 
-	socklen_t = sizeof(sockaddr_in);
+	socklen_t len = sizeof(sockaddr_in);
 	if(bind(sockfd, (struct sockaddr*)&server, len) == -1){
 		perror("Bind :");
 		exit(-1);
